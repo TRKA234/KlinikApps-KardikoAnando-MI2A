@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F5"
+    tools:context=".PageDisplayList">
+
+    <!-- ScrollView for main content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingBottom="80dp"> <!-- Padding bottom untuk memberi jarak dari bottom bar -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Top Action Bar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="12dp">
+
+                <ImageView
+                    android:id="@+id/icon_left"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/back" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="8dp"
+                    android:text="Back"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/icon_notif"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/icon_notif" />
+            </LinearLayout>
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingStart="16dp"
+                android:text="Doctors"
+                android:textColor="@color/black"
+                android:textSize="36sp" />
+
+            <!-- Search Bar and Filter Icon -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <SearchView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corner_search" />
+
+                <ImageView
+                    android:id="@+id/icon_filter"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/icon_filter" />
+            </LinearLayout>
+
+            <!-- RecyclerView for Hashtags -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_hastag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingStart="16dp" />
+
+            <!-- RecyclerView for Icons -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp" />
+
+            <!-- Section Title -->
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingStart="16dp"
+                android:text="ALL"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <!-- RecyclerView for Doctors -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_dokter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:paddingStart="16dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom App Bar with Centered FloatingActionButton -->
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:fabAlignmentMode="center"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="30dp"
+        app:fabCradleVerticalOffset="10dp"
+        app:hideOnScroll="true">
+
+        <!-- Bottom Navigation Menu -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_nav_transparan"
+            app:menu="@menu/botton_nav" />
+
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

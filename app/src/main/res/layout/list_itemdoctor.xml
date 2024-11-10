@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgDokter"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:srcCompat="@drawable/dokter4"
+                    android:scaleType="centerCrop"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtNamaDokter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/glory_medium"
+                    android:text="Nama dokter"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/txtSpesialis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Spesialis"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="review" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:isIndicator="true"
+                    android:numStars="1"
+                    android:progressBackgroundTint="#FD0157"
+                    android:progressBackgroundTintMode="src_in"
+                    android:stepSize="0.1" />
+
+                <TextView
+                    android:id="@+id/txtNilai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:foregroundTint="#9C27B0"
+                    android:text="4.9"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

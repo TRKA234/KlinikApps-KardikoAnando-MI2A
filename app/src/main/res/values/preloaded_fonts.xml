@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/gilda_display</item>
+        <item>@font/glory_medium</item>
+        <item>@font/glory_semibold</item>
+    </array>
+</resources>
